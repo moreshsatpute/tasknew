@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import CartItem from './components/CartItem';
+// import Header from './components/Header';
+import burger from "./assets/burger.jpg"
+import OrderSummary from './components/OrderSummary';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='header'>
+
+      <h1>Checkout</h1>
+      <h2 className='name'>nigadi | pune </h2>
+      </div>
+      <CartItem
+        name="Carebian spicy zinger"
+        price='319'
+        calories="150"
+        image={burger}
+        quantity="1"
+      
+      />
+      <CartItem
+        name="Carebian spicy zinger"
+        price='319'
+        calories="150"
+        image={burger}
+        quantity="1"
+      
+      />
+      <OrderSummary/>
+
+  
     </div>
   );
 }
